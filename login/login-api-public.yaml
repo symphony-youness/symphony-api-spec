@@ -267,6 +267,9 @@ definitions:
           The token which should be passed. This should be considered opaque data by
           the client. It is not intended to contain any data interpretable by the
           client. The format is secret and subject to change without notice.
+      accessToken:
+        type: string
+        description: short lived token
   AuthenticateRequest:
       type: object
       description: Request body for pubkey authentication
