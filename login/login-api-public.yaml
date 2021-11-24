@@ -267,9 +267,11 @@ definitions:
           The token which should be passed. This should be considered opaque data by
           the client. It is not intended to contain any data interpretable by the
           client. The format is secret and subject to change without notice.
-      accessToken:
+      authorizationToken:
         type: string
-        description: short lived token
+        description: |
+          Short lived access token built from a user session. It can be used for the same purposes as the sessionToken
+          and It should be passed as header named "Authorization".
   AuthenticateRequest:
       type: object
       description: Request body for pubkey authentication

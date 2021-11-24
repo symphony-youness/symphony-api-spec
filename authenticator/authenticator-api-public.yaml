@@ -269,6 +269,11 @@ definitions:
           The token which should be passed. This should be considered opaque data by
           the client. It is not intended to conatain any data interpretable by the
           client. The format is secret and subject to change without notice.
+      authorizationToken:
+        type: string
+        description: |
+          Short lived access token built from a user session. It can be used for the same purposes as the sessionToken
+          and It should be passed as header named "Authorization".
   ExtensionAppAuthenticateRequest:
       type: object
       description: Request body for extension app authentication
